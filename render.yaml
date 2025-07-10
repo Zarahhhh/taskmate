@@ -5,8 +5,8 @@ services:
     region: oregon
     plan: free
     branch: master
-    buildCommand: npm install
-    startCommand: node server.js
+    buildCommand: cd backend && npm install
+    startCommand: cd backend && node server.js
     envVars:
       - key: MONGO_URI
         sync: false
