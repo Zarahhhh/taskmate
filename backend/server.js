@@ -14,6 +14,10 @@ const taskRoutes = require('./routes/taskRoutes');
 app.use('/api/auth', authRoutes);
 app.use('/api/tasks', taskRoutes);
 
+app.get('/', (req, res) => {
+  res.send('🚀 Welcome to the Taskmate API backend!');
+});
+
 mongoose.connect(process.env.MONGO_URI, { useNewUrlParser: true, useUnifiedTopology: true })
 .then(() => {
   console.log('MongoDB connected');
