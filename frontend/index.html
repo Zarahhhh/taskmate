@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>TaskMate - ToDo App</title>
+  <style>
+    body { font-family: Arial; max-width: 500px; margin: auto; }
+    h2 { text-align: center; }
+    form, ul { margin-top: 20px; }
+    input { margin: 5px; padding: 5px; width: 90%; }
+    button { margin-top: 10px; padding: 5px; }
+    li { margin: 8px 0; list-style: none; }
+    .done { text-decoration: line-through; }
+  </style>
+</head>
+<body>
+  <h2>TaskMate</h2>
+
+  <!-- Auth Section -->
+  <div id="auth-section">
+    <h3>Register</h3>
+    <input type="text" id="reg-username" placeholder="Username">
+    <input type="password" id="reg-password" placeholder="Password">
+    <button onclick="register()">Register</button>
+
+    <h3>Login</h3>
+    <input type="text" id="login-username" placeholder="Username">
+    <input type="password" id="login-password" placeholder="Password">
+    <button onclick="login()">Login</button>
+  </div>
+
+  <!-- Task Section -->
+  <div id="task-section" style="display:none">
+    <h3>Welcome!</h3>
+    <input type="text" id="task-input" placeholder="New task">
+    <button onclick="addTask()">Add Task</button>
+    <ul id="task-list"></ul>
+    <button onclick="logout()">Logout</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
